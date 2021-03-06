@@ -41,13 +41,13 @@ function twiSearch(){
   } catch(e) {
     if(e.message.length > 0){ window.alert(e.message); }
   }
-}
+};
 // })()
 
 // テキスト全選択
 function selectAll(target) {
     target.select();
-}
+};
 
 // 全文コピーボタン
 function easyCopy() {
@@ -55,4 +55,4 @@ function easyCopy() {
     copyTarget.select();
     document.execCommand("Copy");
     alert("全文コピーしました！");
-}
+};
