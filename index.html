@@ -3,27 +3,27 @@
 <head>
   <!-- JSブックマークレット  // 表示中のユーザーツイート検索 -->
   <meta charset="utf-8">
-  <title>JSテスト</title>
+  <title>いっぱつけんさく</title>
   <link rel="stylesheet" href="./css/styles.css">
   <script type="text/javascript" src="./js/main.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <header>
-    <!-- <h4>Twitter</h4> -->
-    <!-- <h4>ブックマークレット</h4> -->
     <h4>Twitter一発検索</h4>
-    <!-- <p><input type="button" value="入力ダイアログ" onClick="twiSearch()"></p> -->
   </header>
   <div class="main">
     <div class="container">
       <div class="contents">
-        <a href="javascript:;(function(){try{const url=location.href;const listIdArr=url.match(/(?<=\/lists\/)\d{15,20}/)　??[null];const userNameArr=url.match(/(?<=twitter\.com\/)\w*/)??[null];let isList=!1;let isUser=!1;if(listIdArr[0]!=null){isList=!0}else if(userNameArr[0]!=null&&userNameArr[0].length>=2){isUser=!0}else{throw new Error('【取得失敗】検索したいTwitterユーザーかリストのページで試して下さい')} const searchWord1=window.prompt('検索ワードを入力','')??!1;if(searchWord1===!1){throw new Error('')}else{const rtRegex=/^[r|ｒ][t|ｔ](\s+)|(\s+)[r|ｒ][t|ｔ]$|^[r|ｒ][t|ｔ]$/i;const searchWord2=searchWord1.trim().replace(rtRegex,'(filter:nativeretweets)');let query;if(isList===!0){query='(list:'+listIdArr[0]+')'+searchWord2}else if(isUser===!0){query='(from:'+userNameArr[0]+')'+searchWord2} const encodedQuery=encodeURIComponent(query);window.open('https://twitter.com/search?q='+encodedQuery+'&f=live','_self')}}catch(e){if(e.message.length>0){window.alert(e.message)}}})();">
+         <p><input type="button" value="twiSearch()テスト" onClick="twiSearch()"></p>
+      </div>
+      <div class="contents">
+        <a href="javascript:;(function(){try{const t=location.href;var l=t.match(/(?<=\/lists\/)\d{15,20}/)||[null],i=t.match(/(?<=twitter\.com\/)\w*/)||[null];let e=!1,r=!1;if(null!=l[0])e=!0;else if(null!=i[0]&&2<=i[0].length)r=!0;else{if(!1===window.confirm('【取得失敗】\nTwitterユーザーかリストのページで試して下さい。\nTwitterへ移動しますか？'))throw new Error('');window.open('https://twitter.com/search?q=(filter%3Afollows)(-filter%3Areplies)&f=live','_self')}const n=window.prompt('検索ワードを入力','')||!1;if(!1===n)throw new Error('');{var o=/^[r|ｒ][t|ｔ](\s+)|(\s+)[r|ｒ][t|ｔ]$|^[r|ｒ][t|ｔ]$/i,o=n.trim().replace(o,'(filter:nativeretweets)');let t;!0===e?t='(list:'+l[0]+')'+o:!0===r&&(t='(from:'+i[0]+')'+o);o=encodeURIComponent(t);window.open('https://twitter.com/search?q='+o+'&f=live','_self')}}catch(t){0<t.message.length&&window.alert(t.message)}}());">
         いっぱつけんさく
         </a>
       </div>
       <div class="contents">
-        <a href="javascript:;(function(){try{const url=location.href;const listIdArr=url.match(/(?<=\/lists\/)\d{15,20}/)　??[null];const userNameArr=url.match(/(?<=twitter\.com\/)\w*/)??[null];let isList=!1;let isUser=!1;if(listIdArr[0]!=null){isList=!0}else if(userNameArr[0]!=null&&userNameArr[0].length>=2){isUser=!0}else{throw new Error('【取得失敗】検索したいTwitterユーザーかリストのページで試して下さい')} const searchWord1=window.prompt('検索ワードを入力','')??!1;if(searchWord1===!1){throw new Error('')}else{const rtRegex=/^[r|ｒ][t|ｔ](\s+)|(\s+)[r|ｒ][t|ｔ]$|^[r|ｒ][t|ｔ]$/i;const searchWord2=searchWord1.trim().replace(rtRegex,'(filter:nativeretweets)');let query;if(isList===!0){query='(list:'+listIdArr[0]+')'+searchWord2}else if(isUser===!0){query='(from:'+userNameArr[0]+')'+searchWord2} const encodedQuery=encodeURIComponent(query);window.open('https://twitter.com/search?q='+encodedQuery+'&f=live','_blank')}}catch(e){if(e.message.length>0){window.alert(e.message)}}})();">
+        <a href="javascript:;(function(){try{const t=location.href;var l=t.match(/(?<=\/lists\/)\d{15,20}/)||[null],i=t.match(/(?<=twitter\.com\/)\w*/)||[null];let e=!1,r=!1;if(null!=l[0])e=!0;else if(null!=i[0]&&2<=i[0].length)r=!0;else{if(!1===window.confirm('【取得失敗】\nTwitterユーザーかリストのページで試して下さい。\nTwitterのタブを開きますか？'))throw new Error('');window.open('https://twitter.com/search?q=(filter%3Afollows)(-filter%3Areplies)&f=live','_self')}const n=window.prompt('検索ワードを入力','')||!1;if(!1===n)throw new Error('');{var o=/^[r|ｒ][t|ｔ](\s+)|(\s+)[r|ｒ][t|ｔ]$|^[r|ｒ][t|ｔ]$/i,o=n.trim().replace(o,'(filter:nativeretweets)');let t;!0===e?t='(list:'+l[0]+')'+o:!0===r&&(t='(from:'+i[0]+')'+o);o=encodeURIComponent(t);window.open('https://twitter.com/search?q='+o+'&f=live','_blank')}}catch(t){0<t.message.length&&window.alert(t.message)}}());">
         いっぱつけんさく（別タブ）
         </a>
       </div>
@@ -31,10 +31,12 @@
         <p>または……</p>
       </div>
       <div class="contents">
-        <!-- <textarea id='copyTarget' onclick='selectAll(this)'> -->
-        <textarea id='copyTarget'>javascript:;(function(){try{const url=location.href;const listIdArr=url.match(/(?<=\/lists\/)\d{15,20}/)　??[null];const userNameArr=url.match(/(?<=twitter\.com\/)\w*/)??[null];let isList=!1;let isUser=!1;if(listIdArr[0]!=null){isList=!0}else if(userNameArr[0]!=null&&userNameArr[0].length>=2){isUser=!0}else{throw new Error('【取得失敗】検索したいTwitterユーザーかリストのページで試して下さい')} const searchWord1=window.prompt('検索ワードを入力','')??!1;if(searchWord1===!1){throw new Error('')}else{const rtRegex=/^[r|ｒ][t|ｔ](\s+)|(\s+)[r|ｒ][t|ｔ]$|^[r|ｒ][t|ｔ]$/i;const searchWord2=searchWord1.trim().replace(rtRegex,'(filter:nativeretweets)');let query;if(isList===!0){query='(list:'+listIdArr[0]+')'+searchWord2}else if(isUser===!0){query='(from:'+userNameArr[0]+')'+searchWord2} const encodedQuery=encodeURIComponent(query);window.open('https://twitter.com/search?q='+encodedQuery+'&f=live','_self')}}catch(e){if(e.message.length>0){window.alert(e.message)}}})();</textarea>
+<!-- <textarea id='copyTarget' onclick='selectAll(this)'> -->
+<textarea id='copyTarget'>javascript:;(function(){try{const t=location.href;var l=t.match(/(?<=\/lists\/)\d{15,20}/)||[null],i=t.match(/(?<=twitter\.com\/)\w*/)||[null];let e=!1,r=!1;if(null!=l[0])e=!0;else if(null!=i[0]&&2<=i[0].length)r=!0;else{if(!1===window.confirm('【取得失敗】\nTwitterユーザーかリストのページで試して下さい。\nTwitterへ移動しますか？'))throw new Error('');window.open('https://twitter.com/search?q=(filter%3Afollows)(-filter%3Areplies)&f=live','_self')}const n=window.prompt('検索ワードを入力','')||!1;if(!1===n)throw new Error('');{var o=/^[r|ｒ][t|ｔ](\s+)|(\s+)[r|ｒ][t|ｔ]$|^[r|ｒ][t|ｔ]$/i,o=n.trim().replace(o,'(filter:nativeretweets)');let t;!0===e?t='(list:'+l[0]+')'+o:!0===r&&(t='(from:'+i[0]+')'+o);o=encodeURIComponent(t);window.open('https://twitter.com/search?q='+o+'&f=live','_self')}}catch(t){0<t.message.length&&window.alert(t.message)}}());</textarea>
         <section><input type='button' value='全文コピー' onclick='easyCopy()'></section>
       </div>
+      <!-- <div class="hr">
+      </div> -->
     </div><!-- container -->
   </div><!-- main -->
 </body>
