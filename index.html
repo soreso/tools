@@ -14,8 +14,9 @@
   </header>
   <div class="main">
     <div class="container">
-      <div class="contents">
-         <p><input type="button" value="twiSearch()テスト" onClick="twiSearch()"></p>
+      <div class="contents" style="background: #ddd; border-radius:10px; margin: 10px 20px;">
+         <p><input type="button" value="twiSearch動作確認" onClick="twiSearch()"></p>
+         <p><a href="javascript:;(function(){ alert('アラートテストです') }());">アラートテスト</a></p>
       </div>
       <div class="contents">
         <a href="javascript:;(function(){try{const t=location.href;var l=t.match(/(?<=\/lists\/)\d{15,20}/)||[null],i=t.match(/(?<=twitter\.com\/)\w*/)||[null];let e=!1,r=!1;if(null!=l[0])e=!0;else if(null!=i[0]&&2<=i[0].length)r=!0;else{if(!1===window.confirm('【取得失敗】\nTwitterユーザーかリストのページで試して下さい。\nTwitterへ移動しますか？'))throw new Error('');window.open('https://twitter.com/search?q=(filter%3Afollows)(-filter%3Areplies)&f=live','_self')}const n=window.prompt('検索ワードを入力','')||!1;if(!1===n)throw new Error('');{var o=/^[r|ｒ][t|ｔ](\s+)|(\s+)[r|ｒ][t|ｔ]$|^[r|ｒ][t|ｔ]$/i,o=n.trim().replace(o,'(filter:nativeretweets)');let t;!0===e?t='(list:'+l[0]+')'+o:!0===r&&(t='(from:'+i[0]+')'+o);o=encodeURIComponent(t);window.open('https://twitter.com/search?q='+o+'&f=live','_self')}}catch(t){0<t.message.length&&window.alert(t.message)}}());">
