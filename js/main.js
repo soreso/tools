@@ -9,12 +9,12 @@ function twiSearch(){
     const userNameArr = url.match(/(?<=twitter\.com\/)\w*/) || [null];
     // const listIdArr = url.match(/(?<=\/lists\/)\d{15,20}/)　?? [null];
     // const userNameArr = url.match(/(?<=twitter\.com\/)\w*/) ?? [null];
-    // // urlがlistの場合もuserNameArrは['i']になるので注意
+    // リスト画面の場合はuserNameArrが['i']に、検索画面の場合は「'search'」になるので注意
     let isList = false;
     let isUser = false;
     if(listIdArr[0] != null) {
       isList = true;
-    } else if(userNameArr[0] != null && userNameArr[0].length >= 2) {
+    } else if(userNameArr[0] != null && userNameArr[0] != 'search' && userNameArr[0].length >= 1) {
       isUser = true;
     } else {
       // throw new Error('【取得失敗】検索したいTwitterユーザーかリストのページで試して下さい');
@@ -88,4 +88,38 @@ function hoge3() {
   const c = null;
   const c2 = c ?? 'にゃー';
   alert('c2は' + c2 + 'です');
+};
+
+function example() {
+  const path = location.href.split('/');
+  // twitter ID check
+  if (path[2].endsWith('twitter.com') && path[3]) {
+    // id
+    const id = path[3].split('?')[0];// no parameters
+    // keywords
+    const keywords = prompt('Search from @' + id, '');
+    // search results
+    if (keywords) {
+        location.href = '//twitter.com/search?f=live&q=' + keywords + '%20from:' + id;
+    }
+  }
+}
+
+// tweetSearch呼び出し
+// javascript:
+// ;(function('https%3A%2F%2F127.0.0.1%3A8080%2Fworks%2Ftools%2FtweetSearch.js') {
+// ;(function('https://127.0.0.1:8080/works/tools/tweetSearch.js') {
+;function hogemoge(url){
+  s = document.createElement('script');
+  s.src = url;
+  document.body.appendChild(s);
+};
+// }());
+// }('https://127.0.0.1:8080/works/tools/tweetSearch.js');
+
+;function alertTest(str){
+  alert(str);
+  // s = document.createElement('script');
+  // s.src = url;
+  // document.body.appendChild(s);
 };

@@ -6,6 +6,12 @@ body {
 header {
   text-align: center;
 }
+nav > ul {
+  /* display: flex; */
+}
+nav > ul li {
+  list-style: none;
+}
 div.main {
   background: #fffcfc;
   border-radius: 50px;
@@ -27,6 +33,11 @@ div.contents > textarea {
   background: #fff;
   border-radius: 10px;
   border: 1.5px solid #ccc;
+}
+
+div.hr {
+  margin: 20px 0;
+  border: 1px dashed #aaa;
 }
 
 @media (max-width: 800px) {

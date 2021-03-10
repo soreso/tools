@@ -6,16 +6,29 @@
   <title>いっぱつけんさく</title>
   <link rel="stylesheet" href="./css/styles.css">
   <script type="text/javascript" src="./js/main.js"></script>
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <header>
     <h4>Twitter一発検索</h4>
+    <nav>
+       <ul>
+          <li><a href='./'>トップ</a></li>
+          <li><a href='./sub.html'>サブ</a></li>
+       </ul>
+    </nav>
   </header>
   <div class="main">
     <div class="container">
+      <div class="contents">
+         <a href="./works/tools/tweetSearch.js">ツイートサーチ</a><br>
+         <input type='button' value='ツイートサーチ呼び出し' onclick="hogemoge('https://soreso.github.io/works/tools/tweetSearch.js')"><br>
+         <!-- <input type='button' value='ツイートサーチ呼び出し' onclick="hogemoge('https://127.0.0.1:8080/works/tools/tweetSearch.js')"> -->
+         <input type="button" value='アラート呼び出し' onclick="alertTest('hoge?')">
+      </div>
       <div class="contents" style="background: #ddd; border-radius:10px; margin: 10px 20px;">
-         <p><input type="button" value="twiSearch動作確認" onClick="twiSearch()"></p>
+         <p><input type="button" value="twiSearch動作確認" onclick="twiSearch()"></p>
          <p><a href="javascript:;(function(){ alert('アラートテストです') }());">アラートテスト</a></p>
       </div>
       <div class="contents">
