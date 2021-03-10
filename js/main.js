@@ -107,14 +107,16 @@ function example() {
 
 // tweetSearch呼び出し
 // javascript:
-// ;(function('https%3A%2F%2F127.0.0.1%3A8080%2Fworks%2Ftools%2FtweetSearch.js') {
-// ;(function('https://127.0.0.1:8080/works/tools/tweetSearch.js') {
-;function hogemoge(url){
+// ;(function('https://127.0.0.1:8080/works/tweetSearch.js') {
+// ;(function('https%3A%2F%2F127.0.0.1%3A8080%2Fworks%2FtweetSearch.js') {
+// ;(function('https://soreso.github.io/tools/works/tweetSearch.js'){
+;(function('https%3A%2F%2Fsoreso.github.io%2Ftools%2Fworks%2FtweetSearch.js') {
+// ;function hogemoge(url){
   s = document.createElement('script');
   s.src = url;
   document.body.appendChild(s);
-};
-// }());
+// };
+}());
 // }('https://127.0.0.1:8080/works/tools/tweetSearch.js');
 
 ;function alertTest(str){
